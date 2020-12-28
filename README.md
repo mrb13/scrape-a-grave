@@ -1,10 +1,12 @@
-# scrape-a-grave
+# get-sites
 
->  Scrape and Retrieve [FindAGrave](http://findagrave.com) memorial page data and save them to an SQL database.
+> This Project is forked from & based on [scrape-a-grave] (https://github.com/pirtleshell/scrape-a-grave)
 
 
 ## Scraping
-[FindAGrave](http://findagrave.com) is an index of gravemarkers from cemeteries around the world. Often when doing genealogy research, you don't want to rely on a webpage's future and so you want to download the information to your local file. This python script takes a list of Grave Marker numbers, or FindAGrave urls, scrapes the site for data and prints out a citation of the information. It is currently setup to also save the data in an SQL database.
+[FindAGrave](http://findagrave.com) is an index of gravemarkers from cemeteries around the world. Often when doing genealogy research, you don't want to rely on a webpage's future and so you want to download the information to your local file. This python script takes a list of Findagrave Cemeteries, or FindAGrave urls, scrapes the site for data and prints out a citation of the information. It is currently not setup to write the output anywhere except in print statement. 
+
+Iteration 1 is ugly but functional. 
 
 
 ## Requirements
@@ -17,12 +19,8 @@ $ pip3 install bs4
 ## Usage
 Download these files and change the contents of input text to be a list of FindAGrave ids, or FindAGrave urls. Then run
 ```sh
-$ python3 getgraveids.py
+$ python3 get-sites.py
 ```
-
-The citations will be printed to the console and saved in an SQL database named `graves.db`.
-
-It is also possible to **read links from a GEDCOM** by un-highlighting the ["read from gedcom" section](https://github.com/PirtleShell/scrape-a-grave/blob/master/getgraveids.py#L88). This assumes your GEDCOM source citations have a LINK field with the FindAGrave site.
 
 
 ## License
